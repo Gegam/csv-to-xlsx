@@ -21,10 +21,6 @@ function convertCsvToXlsx(source, destination) {
     throw new Error(`source "${source}" doesn't exist.`);
   }
 
-  // destination doesn't exist
-  if (fs.existsSync(destination)) {
-    throw new Error(`destination "${destination}" already exists.`);
-  }
 
   // read source
   const csvFile = fs.readFileSync(source, 'UTF-8');
